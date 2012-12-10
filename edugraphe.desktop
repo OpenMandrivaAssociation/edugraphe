@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=edugraphe
+Exec=java -jar /usr/share/java/edugraphe.jar
+GenericName[fr]=Edugraphe
+GenericName=Edugraphe
+Name[fr]=Edugraphe
+StartupNotify=true
+Icon=/usr/share/pixmaps/edugraphe.gif
+Terminal=false
+Type=Application
+Categories=Science;Math;
+X-KDE-SubstituteUID=false

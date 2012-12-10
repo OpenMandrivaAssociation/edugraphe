@@ -110,3 +110,16 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/%{name}
 
 
+
+
+%changelog
+* Tue May 17 2011 Funda Wang <fwang@mandriva.org> 1.1-2mdv2011.0
++ Revision: 675856
+- clean desktop file
+
+* Mon Mar 07 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.1-1
++ Revision: 642397
+- Import edugraphe 1.1
+  CCBUG: 62716
+- edugraphe 1.1
+
