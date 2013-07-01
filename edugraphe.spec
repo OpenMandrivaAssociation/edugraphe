@@ -1,7 +1,7 @@
 Name:           edugraphe
 Version:        1.1
 Release:        %mkrel 2
-Summary:        edugraphe is a plotting program in Java
+Summary:        Plotting program in Java
 
 Group:          Sciences/Other
 License:        GPL
