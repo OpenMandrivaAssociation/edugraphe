@@ -1,6 +1,6 @@
 Name:           edugraphe
 Version:        1.1
-Release:        %mkrel 2
+Release:        3
 Summary:        Plotting program in Java
 
 Group:          Sciences/Other
@@ -11,7 +11,6 @@ Source1:       %{name}.desktop
 Source2:       %{name}.gif
 Source3:       %{name}.sh
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 
 BuildRequires:  jpackage-utils
@@ -41,37 +40,36 @@ cd source
 cd ..
 
 %install
-rm -rf $RPM_BUILD_ROOT
 # install jar
-mkdir -p $RPM_BUILD_ROOT%{_javadir}
+mkdir -p %{buildroot}%{_javadir}
 cp -p source/classes/edugraphe.jar   \
-$RPM_BUILD_ROOT%{_javadir}/%{name}-%{version}.jar
-ln -s %{name}-%{version}.jar $RPM_BUILD_ROOT%{_javadir}/%{name}.jar
+%{buildroot}%{_javadir}/%{name}-%{version}.jar
+ln -s %{name}-%{version}.jar %{buildroot}%{_javadir}/%{name}.jar
 
 # install javadoc
-mkdir -p $RPM_BUILD_ROOT%{_javadocdir}/%{name}
+mkdir -p %{buildroot}%{_javadocdir}/%{name}
 cp -rp source/images  \
-$RPM_BUILD_ROOT%{_javadocdir}/%{name}
+%{buildroot}%{_javadocdir}/%{name}
 cp -p source/manuel.html  \
-$RPM_BUILD_ROOT%{_javadocdir}/%{name}
+%{buildroot}%{_javadocdir}/%{name}
 cp -p source/manuel_fr.html  \
-$RPM_BUILD_ROOT%{_javadocdir}/%{name}
+%{buildroot}%{_javadocdir}/%{name}
 
 # install demo
-mkdir -p $RPM_BUILD_ROOT%{_datadir}/%{name}
+mkdir -p %{buildroot}%{_datadir}/%{name}
 cp -p *.txt \
-$RPM_BUILD_ROOT%{_datadir}/%{name}
+%{buildroot}%{_datadir}/%{name}
 cp -rp demo  \
-$RPM_BUILD_ROOT%{_datadir}/%{name}/demo
+%{buildroot}%{_datadir}/%{name}/demo
 
 # install icon
-mkdir -p $RPM_BUILD_ROOT%{_datadir}/pixmaps
-cp -p %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/pixmaps
+mkdir -p %{buildroot}%{_datadir}/pixmaps
+cp -p %{SOURCE2} %{buildroot}%{_datadir}/pixmaps
 
 # install script
-mkdir -p $RPM_BUILD_ROOT%{_bindir}
+mkdir -p %{buildroot}%{_bindir}
 chmod +x %{SOURCE3}
-cp -p  %{SOURCE3} $RPM_BUILD_ROOT%{_bindir}/%{name}
+cp -p  %{SOURCE3} %{buildroot}%{_bindir}/%{name}
 
 
 # desktop file
@@ -97,7 +95,6 @@ update-desktop-database &> /dev/null || :
 
 
 %clean
-rm -rf $RPM_BUILD_ROOT
 
 
 %files
