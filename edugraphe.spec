@@ -5,7 +5,7 @@ Summary:        Plotting program in Java
 
 Group:          Sciences/Other
 License:        GPL
-URL:            http://joel.amblard.pagesperso-orange.fr
+URL:            https://joel.amblard.pagesperso-orange.fr
 Source0:        http://joel.amblard.pagesperso-orange.fr/prg/edu/edugraphe-1.1.zip
 Source1:       %{name}.desktop
 Source2:       %{name}.gif
